@@ -4,59 +4,31 @@
  */
 
 export const tokens = {
-  "palette": {
-    "blue": {
-      "40": "#1976d2"
+  palette: {
+    yellow: {
+      '90': '#826400',
+      '100': '#594500',
     },
-    "background": {
-      "primary": "#1976d2"
-    }
-  },
-  "button": {
-    "contained": {
-      "primary": {
-        "bg": {
-          "hover": "#1976d2"
-        }
-      }
-    }
-  },
-  "typography": {
-    "fontWeight": "800",
-    "fontSize": "16px",
-    "fontFamily": "Arial Black"
-  },
-  "extendedPalette": {
-    "yellow": {
-      "90": "#826400",
-      "100": "#594500"
+    blue: {
+      '20': '#bbdefb',
+      '30': '#63a4ff',
+      '40': '#1976d2',
     },
-    "blue": {
-      "20": "#bbdefb",
-      "30": "#63a4ff",
-      "40": "#1976d2"
-    }
   },
-  "extendedPalette2": {
-    "yellow": {
-      "90": "#826400",
-      "100": "#594500"
+  typography: {
+    fontWeight: '800',
+    fontSize: '16px',
+    fontFamily: 'Arial Black',
+  },
+  button: {
+    contained: {
+      primary: {
+        bg: {
+          hover: '#594500',
+        },
+      },
     },
-    "blue": {
-      "20": "#bbdefb",
-      "30": "#63a4ff",
-      "40": "#1976d2"
-    }
   },
-  "button2": {
-    "contained": {
-      "primary": {
-        "bg": {
-          "hover": "#594500"
-        }
-      }
-    }
-  }
 } as const;
 
 export type Tokens = typeof tokens;

@@ -3,15 +3,13 @@
  */
 
 :root {
+  --palette-yellow-90: #826400;
+  --palette-yellow-100: #594500;
+  --palette-blue-20: #bbdefb;
+  --palette-blue-30: #63a4ff;
   --palette-blue-40: #1976d2;
-  --palette-background-primary: #1976d2;
-  --button-contained-primary-bg-hover: #1976d2;
-  --typography: 800 16px 'Arial Black';
-  --extended-palette: [object Object];
-  --extended-palette2-yellow-90: #826400;
-  --extended-palette2-yellow-100: #594500;
-  --extended-palette2-blue-20: #bbdefb;
-  --extended-palette2-blue-30: #63a4ff;
-  --extended-palette2-blue-40: #1976d2;
-  --button2-contained-primary-bg-hover: #594500;
+  --typography-font-weight: 800;
+  --typography-font-size: 16px;
+  --typography-font-family: Arial Black;
+  --button-contained-primary-bg-hover: #594500;
 }

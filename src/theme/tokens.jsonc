@@ -1,0 +1,31 @@
+{
+  "palette": {
+    "type": "palette",
+    "yellow": {
+      "100": { "value": "#594500" },
+      "90": { "value": "#826400" },
+    },
+    "blue": {
+      "40": { "value": "#1976d2" },
+      "30": { "value": "#63a4ff" },
+      "20": { "value": "#bbdefb" },
+    },
+  },
+  "typography": {
+    "type": "typography",
+    "fontWeight": { "value": "800" },
+    "fontSize": { "value": "16px" },
+    "fontFamily": { "value": "Arial Black" },
+  },
+  "button": {
+    "contained": {
+      "primary": {
+        "bg": {
+          "hover": {
+            "value": "{palette.yellow.100}",
+          },
+        },
+      },
+    },
+  },
+}
