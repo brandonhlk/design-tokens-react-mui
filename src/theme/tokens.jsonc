@@ -10,6 +10,11 @@
       "30": { "value": "#63a4ff" },
       "20": { "value": "#bbdefb" },
     },
+    "red": {
+      "40": { "value": "#d32f2f" },
+      "30": { "value": "#e57373" },
+      "20": { "value": "#ffcdd2" },
+    },
   },
   "typography": {
     "type": "typography",
@@ -24,6 +29,16 @@
           "hover": {
             "value": "{palette.yellow.100}",
           },
+        },
+      },
+    },
+  },
+  // ts.sem.colour.primary.main
+  "ts": {
+    "sem": {
+      "colour": {
+        "primary": {
+          "main": { "value": "{palette.blue.40}" },
         },
       },
     },

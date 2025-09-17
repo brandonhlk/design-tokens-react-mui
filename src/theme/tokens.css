@@ -8,8 +8,12 @@
   --palette-blue-20: #bbdefb;
   --palette-blue-30: #63a4ff;
   --palette-blue-40: #1976d2;
+  --palette-red-20: #ffcdd2;
+  --palette-red-30: #e57373;
+  --palette-red-40: #d32f2f;
   --typography-font-weight: 800;
   --typography-font-size: 16px;
   --typography-font-family: Arial Black;
   --button-contained-primary-bg-hover: #594500;
+  --ts-sem-colour-primary-main: #1976d2;
 }

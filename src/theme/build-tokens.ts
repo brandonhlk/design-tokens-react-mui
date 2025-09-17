@@ -1,6 +1,5 @@
 import StyleDictionary, { type TransformedTokens } from 'style-dictionary';
 
-// Type for token values
 type TokenValue = string | number | boolean | TokenObject | TokenValue[];
 
 interface TokenObject {

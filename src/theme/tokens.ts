@@ -14,6 +14,11 @@ export const tokens = {
       '30': '#63a4ff',
       '40': '#1976d2',
     },
+    red: {
+      '20': '#ffcdd2',
+      '30': '#e57373',
+      '40': '#d32f2f',
+    },
   },
   typography: {
     fontWeight: '800',
@@ -25,6 +30,15 @@ export const tokens = {
       primary: {
         bg: {
           hover: '#594500',
+        },
+      },
+    },
+  },
+  ts: {
+    sem: {
+      colour: {
+        primary: {
+          main: '#1976d2',
         },
       },
     },
