@@ -1,18 +1,25 @@
-import StyleDictionary from 'style-dictionary';
+import StyleDictionary, { type TransformedTokens } from 'style-dictionary';
 
-// Recursively transform Style Dictionary token objects into a TS-friendly object
-const tokensToObject = (tokens: any): any => {
+// Type for token values
+type TokenValue = string | number | boolean | TokenObject | TokenValue[];
+
+interface TokenObject {
+  [key: string]: TokenValue;
+}
+
+// Recursively transform Style Dictionary token objects into TypeScript-friendly object
+const tokensToObject = (tokens: TransformedTokens): TokenValue => {
   if ('value' in tokens) {
     return tokens.value;
   }
   if (typeof tokens === 'object') {
-    const result: Record<string, any> = {};
+    const result: TokenObject = {};
     for (const [key, val] of Object.entries(tokens)) {
-      result[key] = tokensToObject(val);
+      result[key] = tokensToObject(val as TransformedTokens);
     }
     return result;
   }
-  return tokens;
+  return tokens as TokenValue;
 };
 
 StyleDictionary.registerFormat({
