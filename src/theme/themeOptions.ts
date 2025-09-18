@@ -1,5 +1,5 @@
 import { parseFontSize } from '../utils/utils';
-import { tokens } from './tokens';
+import { tokens } from 'design-tokens/tokens';
 import type { ThemeOptions } from '@mui/material/styles';
 
 const { palette, typography } = tokens;

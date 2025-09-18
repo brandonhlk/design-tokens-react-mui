@@ -87,4 +87,4 @@ Using `ThemeOptions` allows us to control the styles of your components globally
   - Default variants: contained, outlined (just use variant prop in button)
   - Custom variants: back, ghost, danger
 - [x] Evaluate what `CustomThemeProvider` has that the default `ThemeProvider` does not have
-- [ ] Export design tokens as a package to use across different projects/codebases
+- [x] Export design tokens as a package to use across different projects/codebases

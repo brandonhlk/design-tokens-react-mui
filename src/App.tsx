@@ -1,6 +1,6 @@
 import './App.css';
 import themeOptions from './theme/themeOptions';
-import { ghostStyles } from './theme/customThemes';
+import { ghostStyles } from 'design-tokens/customThemes';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
