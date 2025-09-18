@@ -1,4 +1,4 @@
-# Design Tokens
+# Design Tokens with React & Material UI
 
 ## Table of Contents
 
@@ -66,5 +66,8 @@ Using `ThemeOptions` allows us to control the styles of your components globally
 
 ## TODO
 
-- [ ] Manipulate variants of components (i.e. how to handle different variants of Button)
-- [ ] Usage of design tokens across projects (i.e. different codebases)
+- [x] How to handle different custom variants of `Button`
+  - Default variants: contained, outlined (just use variant prop in button)
+  - Custom variants: back, ghost, danger
+- [x] Evaluate what `CustomThemeProvider` has that the default `ThemeProvider` does not have
+- [ ] Export design tokens as a package to use across different projects/codebases

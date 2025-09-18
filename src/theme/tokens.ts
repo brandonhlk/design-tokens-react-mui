@@ -6,8 +6,15 @@
 export const tokens = {
   palette: {
     yellow: {
+      '70': '#fff8e1',
+      '80': '#ffecb3',
       '90': '#826400',
       '100': '#594500',
+    },
+    green: {
+      '20': '#c8e6c9',
+      '30': '#66bb6a',
+      '40': '#388e3c',
     },
     blue: {
       '20': '#bbdefb',
@@ -18,6 +25,17 @@ export const tokens = {
       '20': '#ffcdd2',
       '30': '#e57373',
       '40': '#d32f2f',
+    },
+    grey: {
+      '10': '#f5f5f5',
+      '20': '#eeeeee',
+      '30': '#e0e0e0',
+      '40': '#bdbdbd',
+      '50': '#9e9e9e',
+      '60': '#757575',
+      '70': '#616161',
+      '80': '#424242',
+      '90': '#212121',
     },
   },
   typography: {
@@ -31,6 +49,17 @@ export const tokens = {
         bg: {
           hover: '#594500',
         },
+      },
+    },
+    ghost: {
+      color: '#212121',
+      background: '#9e9e9e',
+      '&:hover': {
+        background: '#f5f5f5',
+        color: '#e0e0e0',
+      },
+      '&:disabled': {
+        color: '#9e9e9e',
       },
     },
   },

@@ -1,10 +1,10 @@
-import themeOptions from './theme/themeOptions';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import themeOptions from './theme/themeOptions';
+import { ghostStyles } from './theme/customThemes';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import Accordion from '@mui/material/Accordion';
 
 function App() {
   const theme = createTheme(themeOptions);
@@ -12,19 +12,53 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
         <h2>Design Tokens Prototype</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {/* Normal Accordion - 1. No style override */}
+          <Accordion>
+            <div style={{ padding: 16 }}>
+              <strong>Accordion Content</strong>
+              <p>No style override</p>
+            </div>
+          </Accordion>
 
-        <Button variant="contained" color="primary" onClick={() => {}}>
-          TEXT
-        </Button>
+          <br />
+
+          {/* Button - 2. Override through ThemeProvider */}
+          <Button variant="contained" onClick={() => {}}>
+            NORMAL
+          </Button>
+
+          {/* Danger Button - 3. Manual style override (BAD) */}
+          <Button
+            variant="outlined"
+            color="error"
+            sx={{
+              color: '#d32f2f',
+              backgroundColor: '#e39ba6ff',
+              boxShadow: 'none',
+              border: '1px solid #d32f2f',
+              '&:hover': {
+                backgroundColor: '#ffcdd2',
+                color: '#b71c1c',
+                border: '1px solid #b71c1c',
+                boxShadow: 'none',
+              },
+              '&:disabled': {
+                color: '#f44336',
+                backgroundColor: '#ffebee',
+                border: '1px solid #f44336',
+              },
+            }}
+          >
+            DANGER (Manual using sx)
+          </Button>
+
+          {/* Ghost Button - 4. Import styles from elsewhere */}
+          <Button variant="outlined" color="primary" sx={ghostStyles}>
+            GHOST (Import styles)
+          </Button>
+        </div>
       </>
     </ThemeProvider>
   );
