@@ -45,6 +45,23 @@ The outputs are controlled and determined in `style-dictionary.config.json`. Mod
 npm run dev
 ```
 
+## Interaction Overview
+
+```mermaid
+flowchart LR
+  subgraph design-token package
+    A[Designer/Developer updates tokens.jsonc] --> B[Run `npm run build:tokens`]
+    B --> C[tokens.ts / tokens.css generated]
+    C --> D[Upgrade package version to export to other projects]
+  end
+  subgraph External Projects
+    D --> E[Import updated design-token package]
+    E --> F[Material UI ThemeOptions configured in codebase]
+    F --> G[ThemeProvider applies theme to components]
+    G --> H[Components use theme values for styling]
+  end
+```
+
 ## Material UI Theme Integration
 
 Material UI components are customized using the generated design tokens via the `ThemeOptions` object in `src/theme/themeOptions.ts`. This integration ensures that your UI components consistently use the design system values defined by the designers.
