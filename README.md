@@ -37,10 +37,10 @@ flowchart LR
     E --> F[Publish latest package for other projects to import]
   end
   subgraph External Projects
-    D --> E[Import updated design-token package]
-    E --> F[Material UI ThemeOptions configured in codebase]
-    F --> G[ThemeProvider applies theme to components]
-    G --> H[Components use theme values for styling]
+    F --> G[Import updated design-token package]
+    G --> H[Material UI ThemeOptions configured in codebase]
+    H --> I[ThemeProvider applies theme to components]
+    I --> J[Components use theme values for styling]
   end
 ```
 
