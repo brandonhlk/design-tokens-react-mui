@@ -28,23 +28,23 @@ const themeOptions: ThemeOptions = {
           color: palette.green['40'],
           backgroundColor: palette.green['20'],
           '&.Mui-disabled': {
-            color: '#948a8aff',
-            backgroundColor: '#4d4d4dff',
+            color: palette.grey['40'],
+            backgroundColor: palette.grey['50'],
             opacity: 1,
             fontWeight: typography.fontWeight,
           },
-          textTransform: 'capitalize', // Only first letter uppercase
+          textTransform: 'capitalize', // only first letter is uppercase
         },
       },
     },
     MuiTouchRipple: {
       styleOverrides: {
         root: {
-          color: '#982596ff',
+          color: palette.green['40'],
           opacity: 0.9,
         },
         child: {
-          backgroundColor: '#ff9800',
+          backgroundColor: palette.green['40'],
         },
       },
     },
