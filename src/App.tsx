@@ -26,7 +26,11 @@ function App() {
 
           {/* Button - 2. Override through ThemeProvider */}
           <Button variant="contained" onClick={() => {}}>
-            NORMAL
+            normal
+          </Button>
+
+          <Button variant="contained" onClick={() => {}} disabled>
+            disabled
           </Button>
 
           {/* Danger Button - 3. Manual style override (BAD) */}
@@ -51,12 +55,12 @@ function App() {
               },
             }}
           >
-            DANGER (Manual using sx)
+            danger (Manual using sx)
           </Button>
 
           {/* Ghost Button - 4. Import styles from elsewhere */}
           <Button variant="outlined" color="primary" sx={ghostStyles}>
-            GHOST (Import styles)
+            ghost (Import styles)
           </Button>
         </div>
       </>
