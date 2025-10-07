@@ -1,10 +1,11 @@
 import './App.css';
 import themeOptions from './theme/themeOptions';
-import { ghostStyles } from 'design-tokens/customThemes';
+import { ghostButtonStyle, dangerButtonStyle } from 'design-tokens/customThemes';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Accordion from '@mui/material/Accordion';
+import Chip from '@mui/material/Chip';
 
 function App() {
   const theme = createTheme(themeOptions);
@@ -58,10 +59,26 @@ function App() {
             danger (Manual using sx)
           </Button>
 
-          {/* Ghost Button - 4. Import styles from elsewhere */}
-          <Button variant="outlined" color="primary" sx={ghostStyles}>
-            ghost (Import styles)
+          {/* Custom Buttons - 4a. Import styles from elsewhere in sx */}
+          <Button variant="outlined" color="primary" sx={ghostButtonStyle}>
+            GHOST (Import styles)
           </Button>
+
+          <Button variant="outlined" color="primary" sx={dangerButtonStyle}>
+            DANGER (Import styles)
+          </Button>
+
+          {/* Custom Violet Button - 5a. Modify color to violet (pass in custom color - requires extending types) */}
+          <Button variant="outlined" color="violet">
+            VIOLET Outlined (modify color)
+          </Button>
+          <Button variant="contained" color="violet">
+            VIOLET Contained (modify color)
+          </Button>
+
+          {/* Chip - 5b. Modify color (pass in custom color - requires extending types) */}
+          <Chip label="Chip Color Primary" color="primary" variant="outlined" clickable />
+          <Chip label="Chip Color Violet" color="violet" variant="outlined" clickable />
         </div>
       </>
     </ThemeProvider>

@@ -15,6 +15,8 @@ This project shows a sample React application that uses design tokens generated 
 
 Refer to https://github.com/pinardy/design-tokens to see how the design tokens are generated and exported.
 
+A detailed explanation of how to customize Material UI components can be found in their official documentation [here](https://mui.com/material-ui/customization/how-to-customize).
+
 ## Getting Started
 
 1. Install project dependencies with `npm i`.
@@ -49,3 +51,13 @@ flowchart LR
 Material UI components are customized using the generated design tokens via the `ThemeOptions` object in `src/theme/themeOptions.ts`. This integration ensures that your UI components consistently use the design system values defined by the designers.
 
 Using `ThemeOptions` allows us to control the styles of your components globally, instead of having developers going into each component to manually override the styles of the component. This approach allows you to update your design tokens and have those changes automatically reflected throughout your Material UI components, ensuring a consistent and maintainable design system.
+
+## Extending Types
+
+To add new custom colors, refer to the official documentation [here](https://mui.com/material-ui/customization/palette/#custom-colors).
+
+A new types file `mui-component-override.d.ts` is added to override the `Button` and `Chip` props to include the `violet` colour as a valid colour. This allows us to pass "violet" in as a colour like this:
+
+```tsx
+<Chip label="Chip Color Primary" color="primary" variant="outlined" />
+```
