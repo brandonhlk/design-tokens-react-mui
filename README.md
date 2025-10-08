@@ -6,6 +6,7 @@
 - [Getting Started](#getting-started)
 - [Interaction Overview](#interaction-overview)
 - [Material UI Theme Integration](#material-ui-theme-integration)
+- [Extending Types](#extending-types)
 
 ## Introduction
 
@@ -68,4 +69,4 @@ However, to prevent having all projects that are importing the `design-tokens` p
 import 'design-tokens/mui-component-override';
 ```
 
-This would import all the component overrides to extend the types in the MUI palette and components without you having to create your own types extension file.
+This would import all the component overrides to extend the types in the MUI palette and components without you having to create your own types extension file. The contents of this file can be found [here](https://github.com/pinardy/design-tokens/blob/main/src/types/mui-component-override.d.ts).
