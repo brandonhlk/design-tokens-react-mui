@@ -56,8 +56,16 @@ Using `ThemeOptions` allows us to control the styles of your components globally
 
 To add new custom colors, refer to the official documentation [here](https://mui.com/material-ui/customization/palette/#custom-colors).
 
-A new types file `mui-component-override.d.ts` is added to override the `Button` and `Chip` props to include the `violet` colour as a valid colour. This allows us to pass "violet" in as a colour like this:
+A new types file (example [here](https://mui.com/material-ui/customization/palette/#typescript-2)) is needed to override the `Button` and `Chip` props to include the `violet` colour as a valid colour. This allows us to pass "violet" in as a colour like this:
 
 ```tsx
-<Chip label="Chip Color Primary" color="primary" variant="outlined" />
+<Chip label="Chip Color Primary" color="violet" variant="outlined" />
 ```
+
+However, to prevent having all projects that are importing the `design-tokens` package to have to create this file, this can be imported in instead as seen in `mui-override.d.ts`. This file has the following import statement:
+
+```ts
+import 'design-tokens/mui-component-override';
+```
+
+This would import all the component overrides to extend the types in the MUI palette and components without you having to create your own types extension file.

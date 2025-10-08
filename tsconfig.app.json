@@ -6,6 +6,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["@mui/material", "design-tokens"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

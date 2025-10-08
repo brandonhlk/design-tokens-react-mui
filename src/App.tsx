@@ -34,6 +34,8 @@ function App() {
             disabled
           </Button>
 
+          <br />
+
           {/* Danger Button - 3. Manual style override (BAD) */}
           <Button
             variant="outlined"
@@ -59,6 +61,8 @@ function App() {
             danger (Manual using sx)
           </Button>
 
+          <br />
+
           {/* Custom Buttons - 4a. Import styles from elsewhere in sx */}
           <Button variant="outlined" color="primary" sx={ghostButtonStyle}>
             GHOST (Import styles)
@@ -68,6 +72,8 @@ function App() {
             DANGER (Import styles)
           </Button>
 
+          <br />
+
           {/* Custom Violet Button - 5a. Modify color to violet (pass in custom color - requires extending types) */}
           <Button variant="outlined" color="violet">
             VIOLET Outlined (modify color)
@@ -75,6 +81,8 @@ function App() {
           <Button variant="contained" color="violet">
             VIOLET Contained (modify color)
           </Button>
+
+          <br />
 
           {/* Chip - 5b. Modify color (pass in custom color - requires extending types) */}
           <Chip label="Chip Color Primary" color="primary" variant="outlined" clickable />
